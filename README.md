@@ -26,9 +26,12 @@ GRANT ALL PRIVILEGES ON DATABASE db_flexisourceit TO user_flexisourceit;
 
 
 ### Get Users Stock list
-`api/users/{usuer_id}/stock`
+GET `api/users/{user_id}/stock`
 
 ### Buy and Sell Stock
 POST: `api/order/stock`
 payload: `{"user":1, "stock": 2, "quantity":3, "action": "sell"}`
 *action* [sell, buy]
+
+### Get amount of selled and buyed stock
+GET `/api/user/{user_id}/stock/{stock_id}`
